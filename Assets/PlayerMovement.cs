@@ -13,8 +13,13 @@ public class PlayerMovement : MonoBehaviour
     [SerializeField] private TextMeshProUGUI scoreText;
 
     bool goingleft = true;
+    private bool canMoveHorizontally = false;
 
     int score = 0;
+
+    public void EnableHorizontalMovement() {
+        canMoveHorizontally = true;
+    }
 
     void Start()
     {
@@ -37,12 +42,14 @@ public class PlayerMovement : MonoBehaviour
         if (Input.GetKey(KeyCode.DownArrow)) {
             transform.position += new Vector3(0, -verticalSpeed, 0) * Time.deltaTime;
         }
-
-        if (goingleft) {
-            transform.position += new Vector3(-horizontalSpeed, 0, 0) * Time.deltaTime;
-        }
-        else {
-            transform.position += new Vector3(horizontalSpeed, 0, 0) * Time.deltaTime;
+        
+        if (canMoveHorizontally) {
+            if (goingleft) {
+                transform.position += new Vector3(-horizontalSpeed, 0, 0) * Time.deltaTime;
+            }
+            else {
+                transform.position += new Vector3(horizontalSpeed, 0, 0) * Time.deltaTime;
+            }
         }
 
         // Checks if the player is above or below the screen so that it can't leave the screen
