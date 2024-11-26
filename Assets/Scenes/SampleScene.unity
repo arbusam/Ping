@@ -619,8 +619,9 @@ GameObject:
   - component: {fileID: 1013856683}
   - component: {fileID: 1013856682}
   - component: {fileID: 1013856684}
+  - component: {fileID: 1013856685}
   m_Layer: 0
-  m_Name: Square
+  m_Name: Enemy
   m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -690,8 +691,8 @@ Transform:
   m_GameObject: {fileID: 1013856681}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -8, y: -0.22, z: 0}
-  m_LocalScale: {x: 0.786746, y: 3.6074307, z: 1}
+  m_LocalPosition: {x: -8, y: 0, z: 0}
+  m_LocalScale: {x: 0.4, y: 2.5, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
@@ -742,6 +743,22 @@ BoxCollider2D:
   m_AutoTiling: 0
   m_Size: {x: 1, y: 1}
   m_EdgeRadius: 0
+--- !u!114 &1013856685
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1013856681}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 541b2bb6de76247f98d864ffb796c258, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  player: {fileID: 1078497814}
+  speed: 5
+  timeBetweenDirectionChanges: 0.5
+  sensitivity: 0.6
 --- !u!1 &1078497811
 GameObject:
   m_ObjectHideFlags: 0
@@ -845,7 +862,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   verticalSpeed: 5
-  horizontalSpeed: 5
+  horizontalSpeed: 10
   scoreText: {fileID: 1383382083}
 --- !u!58 &1078497815
 CircleCollider2D:
