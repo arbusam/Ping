@@ -73,7 +73,7 @@ public class PlayerMovement : MonoBehaviour
         }
         else if (collision.gameObject.tag == "Goal")
         {
-            transform.position = new Vector3(0, 0, 0); 
+            transform.position = new Vector3(6, 0, 0); 
             goingleft = true;
             score++;
             scoreText.text = "Score: " + score;
