@@ -55,7 +55,7 @@ public class PlayerMovement : MonoBehaviour
         else if (difficulty == 3) {
             return hardVerticalSpeed;
         }
-        return 0;
+        return easyVerticalSpeed;
     }
 
     float GetHorizontalSpeed() {
@@ -77,14 +77,14 @@ public class PlayerMovement : MonoBehaviour
         {
             transform.position += new Vector3(0, GetVerticalSpeed(), 0) * Time.deltaTime;
         }
-        if (Input.GetKey(KeyCode.UpArrow)) {
+        else if (Input.GetKey(KeyCode.UpArrow)) {
             transform.position += new Vector3(0, GetVerticalSpeed(), 0) * Time.deltaTime;
         }
         if (Input.GetKey(KeyCode.S))
         {
             transform.position += new Vector3(0, -GetVerticalSpeed(), 0) * Time.deltaTime;
         }
-        if (Input.GetKey(KeyCode.DownArrow)) {
+        else if (Input.GetKey(KeyCode.DownArrow)) {
             transform.position += new Vector3(0, -GetVerticalSpeed(), 0) * Time.deltaTime;
         }
 

@@ -1386,8 +1386,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   player: {fileID: 1078497814}
   sensitivity: 0.6
-  speed: 5
-  timeBetweenDirectionChanges: 0.5
+  easySpeed: 4.5
+  easyTimeBetweenDirectionChanges: 0.75
   mediumSpeed: 5.25
   mediumTimeBetweenDirectionChanges: 0.75
   hardSpeed: 6
@@ -2256,8 +2256,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   player: {fileID: 1078497814}
   sensitivity: 0.6
-  speed: 5
-  timeBetweenDirectionChanges: 0.5
+  easySpeed: 4.5
+  easyTimeBetweenDirectionChanges: 0.75
   mediumSpeed: 5.5
   mediumTimeBetweenDirectionChanges: 0.75
   hardSpeed: 6
