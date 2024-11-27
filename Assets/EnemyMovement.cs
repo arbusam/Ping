@@ -3,9 +3,19 @@ using UnityEngine;
 class EnemyMovement : MonoBehaviour
 {
     [SerializeField] private PlayerMovement player;
-    [SerializeField] private float speed = 3f;
-    [SerializeField] private float timeBetweenDirectionChanges = 1f;
     [SerializeField] private float sensitivity = 1.5f;
+
+    [Header("Easy Settings")]
+    [SerializeField] private float speed = 5.5f;
+    [SerializeField] private float timeBetweenDirectionChanges = 1f;
+
+    [Header("Medium Settings")]
+    [SerializeField] private float mediumSpeed = 5.5f;
+    [SerializeField] private float mediumTimeBetweenDirectionChanges = 0.75f;
+
+    [Header("Hard Settings")]
+    [SerializeField] private float hardSpeed = 6f;
+    [SerializeField] private float hardTimeBetweenDirectionChanges = 0.5f;
 
     private float timeSinceLastDirectionChange = Mathf.Infinity;
     private bool goingUp = false;
